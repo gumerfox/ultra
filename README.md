@@ -84,3 +84,18 @@ SELECT * FROM имя_таблицы LIMIT 10;  -- Просмотр первых 
 SHOW TABLES;  -- Для MySQL
        \dt           -- Для PostgreSQL
        .tables       -- Для SQLite
+       
+       
+       
+       Для MariaDB 8.0 или более поздней версии используйте ALTER USER3:
+
+sql
+ALTER USER 'имя_пользователя'@'хост' IDENTIFIED BY 'новый_пароль';
+Примените изменения3:
+
+sql
+FLUSH PRIVILEGES;
+Выйдите из MariaDB3:
+
+sql
+EXIT;
